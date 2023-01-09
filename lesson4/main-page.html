@@ -153,6 +153,8 @@
             text-align: center;
             line-height: 60px;
             font-size: 45px;
+
+            color: #8a8fa3;
         }
         #fb-button:hover{
             background-color: #754ef9;
@@ -304,7 +306,7 @@
         .skills--infor > p{
             color: #000;
         }
-        .service-container{
+        .service-container, .price-container{
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
@@ -315,7 +317,7 @@
 
             padding-bottom: 100px;
         }
-        .service1{
+        .service1, .price1{
             text-align: center;
             width: 700px;
             margin-bottom: 25px;
@@ -393,7 +395,7 @@
             background-color: beige;
             color: #754ef9;  
         }
-        /* #portfolio-section{
+        #portfolio-section{
             display: flex;
             justify-content: center;
             width: 100%;
@@ -405,20 +407,102 @@
             width: 900px;
         }
         .portfolio1{
-            border: 5px solid red;
-            width: 700px;
+            width: 500px;
         }
         .portfolio2{
-            border: 5px solid red;
+            margin-top: 30px;
             width: 1000px;
 
             display: flex;
-            
+            flex-wrap: wrap;
+            column-gap: 25px;
+            row-gap: 25px;
 
         }
-        .portfolio2 div{
+        .portfolio2 > div{
+            width: 239px;
+            height: 186px;
 
-        } */
+            background-image: url("https://th.bing.com/th/id/OIP.hl9yEOGQXB-0sW7RtuJbfwHaE7?w=233&h=180&c=7&r=0&o=5&pid=1.7");
+            background-position: center;
+        }
+        .imghover{
+            width: 239px;
+            height: 186px;
+            background-color: rgba(117,78,249,.7);
+            display: none;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .imghover > p{
+            color: white;
+        }
+        .portfolio2 > div:hover .imghover{
+            display: block;
+        }
+        #work-button, .price2-item3 > button{
+            margin-top: 30px;
+            margin-left: 370px;
+            width: 100px;
+            height: 40px;
+
+            border-radius: 40px;
+            background-color: #754ef9;
+            color: white;
+        }
+        #work-button:hover, .price2-item3 > button:hover{
+            background-color: white;
+            border: 5px solid #754ef9;
+            color: #754ef9;
+        }
+        .price2{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;   
+            column-gap: 15px;      
+        }
+        .price2-item{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .price2-item1{
+            border: 5px solid #754ef9;
+            height: 40px;
+            padding-top: 5px;
+            color: white;
+            background-color: #754ef9;
+        }
+        .price2-item2{
+            border:2px solid #8a8fa3;
+        }
+        .price2-item3{
+            border: 2px solid #8a8fa3;
+            border-top: none;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .price2-item3 button{
+            margin-top: 30px;
+            margin-left: 0px;
+            
+        }
+        .item-price{
+            font-size: 30px;
+            font-weight: 600;
+            color: #754ef9;
+            padding-top: 15px;
+        }
+        @media screen and (max-width : 768px) {
+            *{
+                max-width: 500px;
+                text-justify: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -433,11 +517,11 @@
             <a href="#about-section">
                 <p class="nav-about">ABOUT</p>
             </a>
-            <a href="#services-section">
+            <a href="#service-section">
                 <p class="nav-services">SERVICE</p>
             </a>
             <a href="#portfolio-section">
-                <P class="nav-portfolio">PORFOLIO</P>
+                <P class="nav-portfolio">PORTFOLIO</P>
             </a>
             <a href="#blog-section">
                 <P class="nav-blog">BLOG</P>
@@ -623,12 +707,100 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis illo nam doloremque quidem ducimus modi sed corporis tenetur, rem iure quia esse facilis porro, adipisci quaerat, sequi ipsum praesentium voluptatum?</p>
             </div>
             <div class="portfolio2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+            </div>
+            <button id="work-button">More Works</button>
+        </div>
+    </div>
+    <div id="price-section">
+        <div class="price-container">
+            <div class="price1">
+                <h3>My Pricing</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, unde cumque? Quia voluptas, distinctio, aspernatur quod porro praesentium sunt omnis fugit enim cupiditate id sit ratione autem. Explicabo, expedita non?</p>
+            </div>
+            <div class="price2">
+                <div class="price2-item">
+                    <div class="price2-item1">
+                        <b>Basic</b>
+                    </div>
+                    <div class="price2-item2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit.</p>
+                        <p class="item-price">$19.00</p>
+                        
+                    </div>
+                    <div class="price2-item3">
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <button>Get Quote</button>
+                    </div>
+                </div>
+                <div class="price2-item">
+                    <div class="price2-item1">
+                        <b>Basic</b>
+                    </div>
+                    <div class="price2-item2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit.</p>
+                        <p class="item-price">$19.00</p>
+                        
+                    </div>
+                    <div class="price2-item3">
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <button>Get Quote</button>
+                    </div>
+                </div>
+                <div class="price2-item">
+                    <div class="price2-item1">
+                        <b>Basic</b>
+                    </div>
+                    <div class="price2-item2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit.</p>
+                        <p class="item-price">$19.00</p>
+                    </div>
+                    <div class="price2-item3">
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <button>Get Quote</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
