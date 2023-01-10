@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fada398572.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        h3{
+            font-weight: 700;
+            font-size: 45px;
+            color: #000;
+            padding-bottom: 20px;
+            margin-bottom: 0px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #8a8fa3;
+            margin: 0;
+        }
+        /* navigation bar */
+        .nav-fixed{
+            position: fixed;
+            top: 0px;
+            height: 50px;
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            display: flex;
+            justify-content: center;
+            column-gap: 600px;
+
+            background-color: whitesmoke;
+        }
+        .nav-button{
+            display: flex;
+            column-gap: 10px;
+        }
+        .nav-button a{
+            text-decoration: none;
+        }
+        .nav-button p:hover{
+            color: #754ef9;
+        }
+        /* home-section */
+        #home-section{
+            margin-top: 50px;
+            background-color: beige !important;
+        }
+        .home-intro{
+            display: flex;
+            justify-content: center;
+            column-gap: 300px;
+        }
+        .home-intro--name--content{
+            padding-top: 50%;
+        }
+        #home--h4--purple{
+            font-size: 30px;
+            color: #754ef9;
+            text-transform: uppercase;
+            margin: 0px;
+            padding-bottom: 15px;
+        }
+        #home--h1--black{
+            font-size: 60px;
+            color: #32333c;
+            text-transform: uppercase;
+            margin: 0px !important;
+
+        }
+        #home--p--gray{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #8a8fa3;
+            margin: 0px;
+            margin-bottom: 40px;
+        }
+        #home-button--purple{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            border: 5px solid #754ef9;
+            border-radius: 100px;
+            background-color: #754ef9;
+
+            text-decoration: none;
+            color: white;
+        }
+        #home-button--purple:hover{
+            background-color: white;
+            color: #754ef9;   
+        }
+
+        .home-intro--img{
+            margin-top: 80px;
+            border: 10px dashed #754ef9;
+        }
+        .home-contact{
+            margin-top: -50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 600px;
+        }
+        #home-contact--right-space{
+            display: block;
+            width: 60px;
+        }
+        #home-contact--decor{
+            position: relative;
+            left: -400px;
+            display: flex;
+            justify-content: flex-end;
+            column-gap:0px;
+        }
+        #decor-line{
+            position: relative;
+            left: -10%;
+
+            width: 500px;
+            height: 5px;
+            background-color:#754ef9;
+            border-radius: 5px;
+
+            margin-top: 36px;
+        }
+        .home-social--button{
+            position: relative;
+            display: flex;
+            column-gap: 10px;
+            /* font-size: 30px; */
+        }
+        .home-social--button a{
+            display: block;
+            
+            width: 60px;
+            height: 60px;
+            border: 4px solid #8a8fa3;
+            border-radius: 50%;
+            
+            text-align: center;
+            line-height: 60px;
+            font-size: 45px;
+
+            color: #8a8fa3;
+        }
+        #fb-button:hover{
+            background-color: #754ef9;
+            border: 4px solid #754ef9;
+
+            display: block;
+            
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            
+            text-align: center;
+            line-height: 60px;
+            font-size: 45px;
+        }
+        #fb-button:hover .fa-brands.fa-facebook-f{
+            color: white !important;
+        }
+        #ig-button:hover{
+            background-color: #754ef9;
+            border: 4px solid #754ef9;
+
+            display: block;
+            
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            
+            text-align: center;
+            line-height: 60px;
+            font-size: 45px;
+        }
+        #ig-button:hover .fa-brands.fa-instagram{
+            color: white !important;
+        }
+        #github-button:hover{
+            background-color: #754ef9;
+            border: 4px solid #754ef9;
+
+            display: block;
+            
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            
+            text-align: center;
+            line-height: 60px;
+            font-size: 45px;
+        }
+        #github-button:hover .fa-brands.fa-github{
+            color: white !important;
+        }
+        /* About-section */
+        .about-contaner{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-intro1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 700px;
+        }
+        .about-intro1 p{
+            text-align: center;
+        }
+        .about-intro2{
+            display: flex;
+            justify-content: center;
+        }
+        .about-intro2--p{
+            display: flex;
+            flex-direction: column;
+            width: 550px;
+        }
+        .about-intro2--skills{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 450px;
+            padding-left: 50px;
+            padding-top: 20px;
+
+        }
+        .about-intro2--p--text h5{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #8a8fa3;
+            margin: 0;
+        }
+        .about-intro2--p-info{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 15px;
+        }
+        .about-intro2--p-info div{
+            display: flex;
+        }
+        .about-intro2--p-info .p--bold{
+            color: black !important;
+        }
+        /* how to select second div */
+        .about-intro2--p-info i{
+            position: relative;
+            left: -4px;
+            color: #754ef9;
+            padding-top: 4px;
+        }
+        .intro2-skills{
+            width: 360px;
+            height: 15px;
+            background-color: #8a8fa3;
+            border-radius: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .html80{
+            width: 80%;
+            border:7.5px solid #754ef9;
+            border-radius: 7.5px;
+        }
+        .css60{
+            width: 60%;
+            border:7.5px solid #754ef9;
+            border-radius: 7.5px;
+        }
+        .photo50{
+            width: 50%;
+            border:7.5px solid #754ef9;
+            border-radius: 7.5px;
+        }
+        .sketch90{
+            width: 80%;
+            border:7.5px solid #754ef9;
+            border-radius: 7.5px;
+        }
+        .skills--infor{
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skills--infor > p{
+            color: #000;
+        }
+        .service-container, .price-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: beige;
+            margin-top: 200px;
+
+            padding-bottom: 100px;
+        }
+        .service1, .price1{
+            text-align: center;
+            width: 700px;
+            margin-bottom: 25px;
+        }
+        .service2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 10px;
+            row-gap: 10px;
+            width: 1100px;
+        }
+        .service2--tag{
+            width: 30%;
+            height: 50%;
+
+            border: 2px solid #754ef9;
+            border-radius: 5%;
+            background-color: white;
+            
+            text-align: center;
+
+            padding-top: 30px;
+        }
+        .tag--content i{
+            color: #754ef9;
+            font-size: 45px;
+        }
+        #decor-section{
+            background-image: url("https://preview.uideck.com/items/unfold/assets/images/call-to-action.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 480px;
+        }
+        .decor-container{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(117,78,249,.7);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content:space-evenly;
+        }
+        .decor1{
+            width: 1000px;
+            /* text-align: center; */
+        }
+        .decor1 *, .decor2 *{
+            color: white;
+        }
+        .decor2{
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 200px;
+        }
+        .decor2-button{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            border: 5px solid #754ef9;
+            border-radius: 100px;
+            
+
+            text-decoration: none;
+            color: white;
+        }
+        .decor2-button:hover{
+            background-color: beige;
+            color: #754ef9;  
+        }
+        #portfolio-section{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .portfolio-container{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            width: 900px;
+        }
+        .portfolio1{
+            width: 500px;
+        }
+        .portfolio2{
+            margin-top: 30px;
+            width: 1000px;
+
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 25px;
+            row-gap: 25px;
+
+        }
+        .portfolio2 > div{
+            width: 239px;
+            height: 186px;
+
+            background-image: url("https://th.bing.com/th/id/OIP.hl9yEOGQXB-0sW7RtuJbfwHaE7?w=233&h=180&c=7&r=0&o=5&pid=1.7");
+            background-position: center;
+        }
+        .imghover{
+            width: 239px;
+            height: 186px;
+            background-color: rgba(117,78,249,.7);
+            display: none;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .imghover > p{
+            color: white;
+        }
+        .portfolio2 > div:hover .imghover{
+            display: block;
+        }
+        #work-button, .price2-item3 > button{
+            margin-top: 30px;
+            margin-left: 370px;
+            width: 100px;
+            height: 40px;
+
+            border-radius: 40px;
+            background-color: #754ef9;
+            color: white;
+        }
+        #work-button:hover, .price2-item3 > button:hover{
+            background-color: white;
+            border: 5px solid #754ef9;
+            color: #754ef9;
+        }
+        .price2{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;   
+            column-gap: 15px;      
+        }
+        .price2-item{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .price2-item1{
+            border: 5px solid #754ef9;
+            height: 40px;
+            padding-top: 5px;
+            color: white;
+            background-color: #754ef9;
+        }
+        .price2-item2{
+            border:2px solid #8a8fa3;
+        }
+        .price2-item3{
+            border: 2px solid #8a8fa3;
+            border-top: none;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .price2-item3 button{
+            margin-top: 30px;
+            margin-left: 0px;
+            
+        }
+        .item-price{
+            font-size: 30px;
+            font-weight: 600;
+            color: #754ef9;
+            padding-top: 15px;
+        }
+        @media screen and (max-width : 768px) {
+
+            .nav-fixed{
+                position: fixed;
+                top: 0px;
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                column-gap: 30px;
+                background-color: whitesmoke;
+            }
+            .nav-button{
+                display: none;
+            }
+            .home-intro{
+                column-gap: 0px;
+            }
+            .home-intro--img{
+                display: none;
+            }
+            .home-intro--name--content{
+                padding-top: 30px;
+            }
+            .home-contact{
+                margin-top: 40px;
+            }
+            .about-intro2{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+            .about-intro-2--skills{
+                box-sizing: border-box;
+            }
+            .intro2-skills, .skills--infor{
+                position: relative;
+                left: -50px;
+                width: 500px;
+            }
+            .service-container{
+                margin-top: 30px;
+            }
+            .service2{
+                width: 100%;
+                gap: 30px;
+            }
+            .service2--tag{
+                width: 40%;
+            }
+            .decor1{
+                width: 100%;
+            }
+            .decor2{
+                width: 100%;
+            }
+            .portfolio-container{
+                width: 100%;
+            }
+            .portfolio1{
+                padding-left: 30px;
+            }
+            .portfolio2{
+                width: auto;
+                justify-content: center;
+            }
+            #work-button{
+                margin: 0px auto;
+                margin-top: 30px;
+            }
+            .price-container{
+                margin: 0px;
+                margin-top: 30px;
+            }
+            .price2{
+                gap: 30px;
+            }
+            .price2-item{
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-fixed">
+        <div class="nav-logo">
+            <img src="https://preview.uideck.com/items/unfold/assets/images/logo.png" alt="unfold's img">
+        </div>
+        <div class="nav-button">
+            <a href="#home-section">
+                <p class="nav-home">HOME</p>
+            </a>
+            <a href="#about-section">
+                <p class="nav-about">ABOUT</p>
+            </a>
+            <a href="#service-section">
+                <p class="nav-services">SERVICE</p>
+            </a>
+            <a href="#portfolio-section">
+                <P class="nav-portfolio">PORTFOLIO</P>
+            </a>
+            <a href="#blog-section">
+                <P class="nav-blog">BLOG</P>
+            </a>
+            <a href="#contact-section">
+                <p class="nav-contact">CONTACT</p>
+            </a>
+        </div>
+    </div>
+    <div id="home-section">
+        <div class="home-intro">
+            <div class="home-intro--name">
+                <div class="home-intro--name--content">
+                    <h4 id="home--h4--purple">HELLO, I'M</h4>
+                    <h1 id="home--h1--black">RONALDO CR7</h1>
+                    <p id="home--p--gray">A FREELANCE DESIGNER, GOOGLE, MINDX, FPT</p>
+                    <a href="#portfolio-section" id="home-button--purple">VIEW MY WORK</a>
+                </div>
+            </div>
+            <div class="home-intro--img">
+                <img src="https://preview.uideck.com/items/unfold/assets/images/banner/hero.png" alt="home's img">
+            </div>
+        </div>
+        <div class="home-contact">
+            <div id="home-contact--decor">
+                <div id="decor-line"></div>
+                <div class="home-social--button">
+                    <a href="https://www.facebook.com/nhoanqqq" target="_blank" id="fb-button">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nhoanqqq" target="_blank" id="ig-button">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/nhoanqqq/C4EJS135" target="_blank" id="github-button">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="home-contact--right-space">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div id="about-section">
+        <div class="about-contaner">
+            <div class="about-intro1">
+                <h3>ABOUT</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet explicabo exercitationem nobis libero aliquid, necessitatibus, porro autem maiores saepe blanditiis tenetur molestias aperiam similique voluptas velit, quae maxime facilis est.</p>
+            </div>
+            <div class="about-intro2">
+                <div class="about-intro2--p">
+                    <div class="about-intro2--p-text">
+                        <h5>Hi There! I'm RONALDO</h5>
+                        <p class="p--gray">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, cupiditate a. Recusandae ea a nesciunt beatae obcaecati alias dolorum dolor, dignissimos omnis eveniet maxime eaque dicta nihil, id molestiae ipsum.</p>
+                    </div>
+                    <div class="about-intro2--p-info">
+                            <div>
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <p class="p--bold">Date of birth:</p>
+                                <p class="p--gray">8 June 1995</p>
+                            </div>
+                            <div>
+                                <!-- icon gmail -->
+                                <i class="fa-solid fa-envelope"></i>
+                                <p class="p--bold">Email:</p>
+                                <p class="p--gray">hoangtnse170464@gmail.com</p>
+                            </div>
+                            <div>
+                                <!-- icon phone -->
+                                <i class="fa-solid fa-phone"></i>
+                                <p class="p--bold">Phone:</p>
+                                <p class="p--gray">+84-0914-222-779</p>
+                            </div>
+                            <div>
+                                <!-- icon location -->
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p class="p--bold">Location:</p>
+                                <p class="p--gray">132,PVD,HCM</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="about-intro2--skills">
+                    <div class="skills--infor">
+                        <p>HTML</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="intro2-skills">
+                        <div class="html80"></div>
+                    </div>
+                    <div class="skills--infor">
+                        <p>CSS</p>
+                        <p>60%</p>
+                    </div>
+                    <div class="intro2-skills">
+                        <div class="css60"></div>
+                    </div>
+                    <div class="skills--infor">
+                        <p>PHOTO</p>
+                        <p>50%</p>
+                    </div>
+                    <div class="intro2-skills">
+                        <div class="photo50"></div>
+                    </div>
+                    <div class="skills--infor">
+                        <p>SKETCH</p>
+                        <p>90%</p>
+                    </div>
+                    <div class="intro2-skills">
+                        <div class="sketch90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="service-section">
+        <div class="service-container">
+            <div class="service1">
+                <h3>My Service</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur, perspiciatis at adipisci autem necessitatibus esse perferendis laboriosam est ipsam mollitia non ex totam distinctio, fugit, rem voluptate quam. Magnam!</p>
+            </div>
+            <div class="service2">
+                <div class="service2--tag">
+                    <div class="tag--content">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h4>Web Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis dolorum fugiat, nisi ad quas cupiditate quibusdam accusamus dicta similique nostrum, vel reprehenderit ipsum blanditiis odio molestias molestiae a maxime?</p>
+                    </div>
+                </div>
+                <div class="service2--tag">
+                    <div class="tag--content">
+                        <i class="fa-solid fa-palette"></i>
+                        <h4>Graphic Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis dolorum fugiat, nisi ad quas cupiditate quibusdam accusamus dicta similique nostrum, vel reprehenderit ipsum blanditiis odio molestias molestiae a maxime?</p>
+                    </div>
+                </div>
+                <div class="service2--tag">
+                    <div class="tag--content">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h4>App Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis dolorum fugiat, nisi ad quas cupiditate quibusdam accusamus dicta similique nostrum, vel reprehenderit ipsum blanditiis odio molestias molestiae a maxime?</p>
+                    </div>
+                </div>
+                <div class="service2--tag">
+                    <div class="tag--content">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <h4>Illustration Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis dolorum fugiat, nisi ad quas cupiditate quibusdam accusamus dicta similique nostrum, vel reprehenderit ipsum blanditiis odio molestias molestiae a maxime?</p>
+                    </div>
+                </div>
+                <div class="service2--tag">
+                    <div class="tag--content">
+                        <i class="fa-solid fa-database"></i>
+                        <h4>Web Development</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis dolorum fugiat, nisi ad quas cupiditate quibusdam accusamus dicta similique nostrum, vel reprehenderit ipsum blanditiis odio molestias molestiae a maxime?</p>
+                    </div>
+                </div>
+                <div class="service2--tag">
+                    <div class="tag--content">
+                        <i class="fa-solid fa-headset"></i>
+                        <h4>Consultancy and Support</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis dolorum fugiat, nisi ad quas cupiditate quibusdam accusamus dicta similique nostrum, vel reprehenderit ipsum blanditiis odio molestias molestiae a maxime?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="decor-section">
+        <div class="decor-container">
+            <div class="decor1">
+                <h3>Have any project on mind?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda est laboriosam autem. Fuga recusandae atque vel excepturi sunt delectus esse commodi quaerat ab quidem, repudiandae nulla quo ipsa, cumque adipisci!</p>
+            </div>
+            <div class="decor2">
+                <div class="decor2-button">DOWNLOAD CV</div>
+                <div class="decor2-button">HIRE ME</div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio-section">
+        <div class="portfolio-container">
+            <div class="portfolio1">
+                <h3>My Recent Works</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis illo nam doloremque quidem ducimus modi sed corporis tenetur, rem iure quia esse facilis porro, adipisci quaerat, sequi ipsum praesentium voluptatum?</p>
+            </div>
+            <div class="portfolio2">
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imghover">
+                        <p>Product Design</p>
+                    </div>
+                </div>
+            </div>
+            <button id="work-button">More Works</button>
+        </div>
+    </div>
+    <div id="price-section">
+        <div class="price-container">
+            <div class="price1">
+                <h3>My Pricing</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, unde cumque? Quia voluptas, distinctio, aspernatur quod porro praesentium sunt omnis fugit enim cupiditate id sit ratione autem. Explicabo, expedita non?</p>
+            </div>
+            <div class="price2">
+                <div class="price2-item">
+                    <div class="price2-item1">
+                        <b>Basic</b>
+                    </div>
+                    <div class="price2-item2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit.</p>
+                        <p class="item-price">$19.00</p>
+                        
+                    </div>
+                    <div class="price2-item3">
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <button>Get Quote</button>
+                    </div>
+                </div>
+                <div class="price2-item">
+                    <div class="price2-item1">
+                        <b>Basic</b>
+                    </div>
+                    <div class="price2-item2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit.</p>
+                        <p class="item-price">$19.00</p>
+                        
+                    </div>
+                    <div class="price2-item3">
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <button>Get Quote</button>
+                    </div>
+                </div>
+                <div class="price2-item">
+                    <div class="price2-item1">
+                        <b>Basic</b>
+                    </div>
+                    <div class="price2-item2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit.</p>
+                        <p class="item-price">$19.00</p>
+                    </div>
+                    <div class="price2-item3">
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <p>Unlimited Tasks</p>
+                        <button>Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
