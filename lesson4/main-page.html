@@ -498,11 +498,92 @@
             padding-top: 15px;
         }
         @media screen and (max-width : 768px) {
-            *{
-                max-width: 500px;
-                text-justify: auto;
+
+            .nav-fixed{
+                position: fixed;
+                top: 0px;
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                column-gap: 30px;
+                background-color: whitesmoke;
+            }
+            .nav-button{
+                display: none;
+            }
+            .home-intro{
+                column-gap: 0px;
+            }
+            .home-intro--img{
+                display: none;
+            }
+            .home-intro--name--content{
+                padding-top: 30px;
+            }
+            .home-contact{
+                margin-top: 40px;
+            }
+            .about-intro2{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+            .about-intro-2--skills{
+                box-sizing: border-box;
+            }
+            .intro2-skills, .skills--infor{
+                position: relative;
+                left: -50px;
+                width: 500px;
+            }
+            .service-container{
+                margin-top: 30px;
+            }
+            .service2{
+                width: 100%;
+                gap: 30px;
+            }
+            .service2--tag{
+                width: 40%;
+            }
+            .decor1{
+                width: 100%;
+            }
+            .decor2{
+                width: 100%;
+            }
+            .portfolio-container{
+                width: 100%;
+            }
+            .portfolio1{
+                padding-left: 30px;
+            }
+            .portfolio2{
+                width: auto;
+                justify-content: center;
+            }
+            #work-button{
+                margin: 0px auto;
+                margin-top: 30px;
+            }
+            .price-container{
+                margin: 0px;
+                margin-top: 30px;
+            }
+            .price2{
+                gap: 30px;
+            }
+            .price2-item{
+                width: 50%;
             }
         }
+        /* demo */
+body {
+  color: #000;
+  font-size: 13px;
+} 
     </style>
 </head>
 <body>
@@ -804,5 +885,6 @@
             </div>
         </div>
     </div>
+    <!-- Demo -->
 </body>
 </html>
