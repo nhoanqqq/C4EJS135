@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        button {
+            margin-left: 45%;
+        }
+    </style>
+
+    <script>
+        var userInfor = new FormData();
+        function doForm() {
+            event.preventDefault();
+            var dataForm = document.getElementsByTagName('input');
+            for (let key of dataForm) {
+                userInfor.append(key.name, key.value);
+            }
+            for (const [name, value] of userInfor) {
+                console.log(name, value);
+            }
+        }
+        // function checkSignIn()
+        
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign-in Page</h1>
+        <form onsubmit="return doForm()">
+            <label for="Username">Username</label>
+            <input type="text" name="Username" id="Username" required>
+            <br><br><br>
+            <label for="Password">Password</label>
+            <input type="password" name="Password" id="Password" required>
+            <br><br><br>
+            <button type="submit">Sign-in</button>
+            <a href="./dangky.html">Sign-up</a>
+        </form>
+    </div>
+</body>
+
+</html>

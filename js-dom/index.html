@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function turnOff() {
+            document.getElementById("light").src = "./img-asset/pic_bulboff.gif";
+        }
+        function turnOn() {
+            document.getElementById("light").src = "./img-asset/pic_bulbon.gif";
+
+        }
+        function dangKy() {
+            const thongBao = document.getElementById("Khoa_hoc");
+            thongBao.innerText = "Chuc mung ban da dang ky thanh cong";
+            thongBao.style.color = "red";
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <h1>Hoc js that don gian</h1>
+    <img id="light" src="./img-asset/pic_bulboff.gif">
+    <button id="ON" onclick="turnOn()">ON</button>
+    <button id="OFF" onclick="turnOff()">OFF</button>
+
+    <h1 id="Khoa_hoc">Khoa hoc chua duoc dang ky</h1>
+    <button id="Dang_ky" onclick="dangKy()">Dang ky</button>
+</body>
+
+</html>

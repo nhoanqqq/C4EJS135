@@ -10,8 +10,9 @@ const studentName = (students) => {
 
     for (const [key, value] of Object.entries(students)) {
         if ((key.indexOf("a") != -1 || key.indexOf("A") != -1) && value >= 5) {
-            let tmp ;
-            tmp = key.replace(/a/gi, 'B');
+            let tmp;
+            tmp = key.replace(/[A]/gi, 'B');
+
             studentName.push(tmp, value);
         }
 
