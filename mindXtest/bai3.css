@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+#header.container {
+    justify-content: space-between;
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+.nav p {
+    padding: 16px;
+}
+
+.nav p:hover {
+    border-radius: 8px;
+    background-color: #849FFF;
+    color: white;
+}
+
+#search {
+    border: 1px solid gray;
+    padding-top: 20px;
+    padding-left: 15px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+#search input {
+    border: 0px;
+}
+
+#content {
+    display: flex;
+
+}
+
+#content img {
+    width: 97px;
+    height: 97px;
+}
+
+#card {
+    padding-bottom: 80px;
+    margin-left: 20px;
+    padding: 24px;
+    gap: 16px;
+    border-radius: 16px;
+    background: #FBFCFF
+}
+
+#card:hover {
+    border: 1px solid #BFC8E6;
+    box-shadow: 0px 8px 23px rgba(218, 224, 249, 0.7);
+}
+
+.name {
+    font-weight: 900;
+    font-size: 18px;
+    color: #151B32;
+}
+
+.address {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tags {
+    font-weight: 500;
+    font-size: 12px;
+    border: 1px solid #BFC8E6;
+    border-radius: 10px;
+    padding: 2px 8px;
+    color: #516FD5
+}

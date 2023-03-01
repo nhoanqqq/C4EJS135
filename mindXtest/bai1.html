@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1|MindX</title>
+</head>
+<body>
+    <h1>Bai1</h1>
+    <p>Tạo một ứng dụng web, cho phép nhập vào 2 số a và b. Hiển thị tổng các số nguyên tố trong khoảng a và b. Tạo giao diện nhập 2 số và in kết quả trên giao diện web</p>
+    <form id="form">
+        <label for="number1">Enter integer a: </label>
+        <input type="number" id="number1" name="number1" required>
+        <br><br><br>
+        <label for="number2">Enter integer b: </label>
+        <input type="number" id="number2" name="number2" required>
+        <br><br><br>
+        <button type="submit">calculate</button>
+    </form>
+    <div id="ans"></div>
+    <script>
+        function calculate(){
+            let a = document.getElementById("number1").value;
+            let b = document.getElementById("number2").value; 
+            a = Number(a);
+            b = Number(b);
+            const ans = [];
+            if(Number.isInteger(a) && Number.isInteger(b)){
+                for(let i = Math.min(a,b); i <= Math.max(a,b); i++ ){
+                   if(checkPrime(i)) ans.push(i);
+                }
+            }
+            
+            const ansdiv = document.getElementById("ans");
+            while(ansdiv.lastChild) ansdiv.removeChild(ansdiv.lastChild);
+            ansdiv.innerHTML = "<h2> Answer </h2>";
+            ans.forEach(number => { 
+                const printAns = document.createElement("p");
+                printAns.innerText = number;
+                ansdiv.appendChild(printAns);
+            });
+           
+        }
+
+        function checkPrime(b){
+            let a = Number(b);
+            if(a == 0 || a == 1 || a == 2) return false;
+            for(let i = 2; i * i <= a; i++){
+                if(a % i == 0) return false;
+            }
+            return true;
+        }
+
+        const form = document.getElementById("form");
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+
+            calculate();
+        });
+    </script>
+</body>
+</html>

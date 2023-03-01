@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="line">Enter number of line</label>
+    <input type="number" name="line"    id="line">
+    <button onclick="print()">Print</button>
+    <div id="ans"></div>
+    <script>
+        function numberOneTriangle(a){
+            const ans = [];
+            for(let i = 1; i <= a; i++){
+                let tmp = "";
+                for(let j = 1; j <= i; j++){
+                    tmp += '*';
+                }
+                ans.push(tmp);
+            }
+            return ans;
+        }
+        function print(){
+            const line = Number(document.getElementById("line").value); 
+            const ans = numberOneTriangle(line);
+            const ansdiv = document.getElementById("ans");
+            while(ansdiv.lastChild) ansdiv.removeChild(ansdiv.lastChild);
+            ansdiv.innerHTML = "<h2> Answer </h2>";
+            ans.forEach(number => { 
+                const printAns = document.createElement("p");
+                printAns.innerText = number;
+                ansdiv.appendChild(printAns);
+            });
+        }
+        
+    </script>
+</body>
+</html>
